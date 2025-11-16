@@ -38,18 +38,6 @@ export class ProductoService {
       .populate('image')
       .populate('categoria');
     const count = await this.productoModel.countDocuments();
-
-    // for (const producto of productos) {
-    //   const result = await this.dmsService.getPresignedUrl(producto.image._id);
-    //   if (!result || !result.url) {
-    //     throw new ConflictException('Error al obtener la URL de la imagen');
-    //   }
-    //   producto.image = {
-    //     _id: producto.image._id,
-    //     isPublic: false,
-    //     url: result.url,
-    //   };
-    // }
     return {
       data: productos,
       page: currentPage,
@@ -92,15 +80,6 @@ export class ProductoService {
       .populate('image')
       .populate('categoria');
     if (!producto) throw new ConflictException('Producto no encontrado');
-    // const result = await this.dmsService.getPresignedUrl(producto.image._id);
-    // if (!result || !result.url) {
-    //   throw new ConflictException('Error al obtener la URL de la imagen');
-    // }
-    // producto.image = {
-    //   _id: producto.image._id,
-    //   isPublic: false,
-    //   url: result.url,
-    // };
     return producto;
   }
 

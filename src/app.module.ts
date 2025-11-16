@@ -11,12 +11,6 @@ import { DmsController } from './dms/dms.controller';
 import { DmsService } from './dms/dms.service';
 import { DmsModule } from './dms/dms.module';
 import { ImgdbModule } from './imgdb/imgdb.module';
-import { VentasModule } from './ventas/ventas.module';
-import { OrderModule } from './order/order.module';
-import { CarrouselModule } from './carrousel/carrousel.module';
-import { ServicesOrderModule } from './services-order/services-order.module';
-import { ServicesTitleModule } from './services-title/services-title.module';
-import { ServicesListModule } from './services-list/services-list.module';
 import { RolesGuard } from './auth/guards/jwt-roles.guard';
 import { MailModule } from './mail/mail.module';
 
@@ -35,12 +29,6 @@ import { MailModule } from './mail/mail.module';
     CategoriaModule,
     DmsModule,
     ImgdbModule,
-    VentasModule,
-    OrderModule,
-    CarrouselModule,
-    ServicesOrderModule,
-    ServicesTitleModule,
-    ServicesListModule,
     MailModule
   ],
   controllers: [AppController, DmsController],
